@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NATMOBILE | Thomas Ragen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mr. Thomas Ragen</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="architecture.html">Architecture</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail-header">
+        <div class="project-back">
+            <a href="projects.html" class="back-link">← Back to Projects</a>
+        </div>
+        <div class="project-hero">
+            <h1>NATMOBILE</h1>
+            <p class="project-tagline">A secure digital banking mobile application built with production-level architecture, transaction security, and modular financial services integration.</p>
+            <div class="project-meta">
+                <span class="meta-tag">.NET MAUI</span>
+                <span class="meta-tag">C#</span>
+                <span class="meta-tag">SQL Server</span>
+                <span class="meta-tag">Security</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+
+        <!-- Overview -->
+        <div class="content-block">
+            <h2>🏦 NATMOBILE</h2>
+            <h3>🚀 Project Overview</h3>
+            <p>
+                NATMOBILE is a cross-platform mobile banking application designed to implement core digital banking features including account management, secure fund transfers, transaction history, and robust authentication. Built on .NET MAUI with an emphasis on security, clean architecture, maintainability, and performance.
+            </p>
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="content-block">
+            <h2>🎯 Problem Statement</h2>
+            <p>Digital banking systems must deliver enterprise-grade security, reliable transactions, and maintainable architecture. NATMOBILE was designed to reflect production banking standards rather than being a simple UI demo.</p>
+            <ul class="feature-list">
+                <li>Secure authentication mechanisms</li>
+                <li>Reliable transactional handling</li>
+                <li>Clear separation of financial logic</li>
+                <li>Responsive and testable UI</li>
+                <li>Scalable, maintainable architecture</li>
+            </ul>
+        </div>
+
+        <!-- My Role -->
+        <div class="content-block">
+            <h2>👨‍💻 My Role</h2>
+            <ul class="role-list">
+                <li>Full System Architect</li>
+                <li>Mobile Application Developer</li>
+                <li>Security Logic Designer</li>
+                <li>API Integration Designer</li>
+                <li>Data Flow Architect</li>
+                <li>UI/UX Workflow Designer</li>
+            </ul>
+            <p>I developed the application from the ground up, structuring presentation and financial transaction logic with enterprise considerations.</p>
+        </div>
+
+        <!-- Architecture & System Design -->
+        <div class="content-block">
+            <h2>🏗 Architecture &amp; System Design</h2>
+            <p>NATMOBILE follows an MVVM pattern inside .NET MAUI to enforce separation of concerns and testability.</p>
+
+            <div class="features-block">
+                <h3>🔹 Presentation Layer</h3>
+                <ul class="feature-list">
+                    <li>Login & Authentication Screens</li>
+                    <li>Dashboard (Account Overview)</li>
+                    <li>Transfer Interface</li>
+                    <li>Transaction History</li>
+                    <li>Profile & Settings</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>🔹 ViewModel Layer</h3>
+                <ul class="feature-list">
+                    <li>Business logic and transaction validation</li>
+                    <li>State management and error handling</li>
+                    <li>API orchestration and data transformation</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>🔹 Service Layer</h3>
+                <ul class="feature-list">
+                    <li>Authentication services and token handling</li>
+                    <li>Transaction processing and account services</li>
+                    <li>Encryption utilities and secure storage</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>🔹 Data Layer</h3>
+                <ul class="feature-list">
+                    <li>Account, Transaction, and User models</li>
+                    <li>Secure storage handling</li>
+                    <li>JSON serialization / deserialization</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Security Design -->
+        <div class="content-block">
+            <h2>🔐 Security Design</h2>
+
+            <div class="features-block">
+                <h3>1️⃣ Authentication</h3>
+                <ul class="feature-list">
+                    <li>Secure login with token-based sessions</li>
+                    <li>Session validation and timeout logic</li>
+                    <li>Planned MFA integration points</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>2️⃣ Secure Data Handling</h3>
+                <ul class="feature-list">
+                    <li>Sensitive data never stored in plain text</li>
+                    <li>Secure storage for authentication tokens</li>
+                    <li>Input validation and sanitation before processing</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>3️⃣ Transaction Validation Layer</h3>
+                <ul class="feature-list">
+                    <li>Balance verification and amount validation</li>
+                    <li>Business rule validation to prevent invalid transfers</li>
+                    <li>Defense against negative balance and manipulation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Core Features -->
+        <div class="content-block">
+            <h2>💳 Core Banking Features</h2>
+
+            <div class="features-block">
+                <h3>🏦 Account Dashboard</h3>
+                <ul class="feature-list">
+                    <li>Current & available balances</li>
+                    <li>Account number and quick actions</li>
+                    <li>Recent transactions preview</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>💸 Funds Transfer Module</h3>
+                <ul class="feature-list">
+                    <li>Transfer between accounts with validation</li>
+                    <li>Double confirmation and error handling</li>
+                    <li>Success / failure states and retries</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>📜 Transaction History</h3>
+                <ul class="feature-list">
+                    <li>Chronological listings with credit/debit differentiation</li>
+                    <li>Timestamps and status indicators</li>
+                    <li>Structured filters for future enhancements</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>👤 Profile & Settings</h3>
+                <ul class="feature-list">
+                    <li>Account details and secure logout</li>
+                    <li>Session termination and security placeholders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Data Flow -->
+        <div class="content-block">
+            <h2>🔄 Data Flow Design</h2>
+            <p>NATMOBILE follows a layered, validated workflow from user input to transaction persistence and notification:</p>
+            <div class="flow-diagram">
+                <div class="flow-step">👤 User Inputs Transaction</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">🔎 ViewModel Validates Input</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">🛠 Service Layer Applies Business Rules</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">🔗 API / Banking Core Interaction</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">✅ Transaction Confirmation & Persistence</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">🔔 Notifications & UI Update</div>
+            </div>
+            <p style="margin-top: 16px;"><strong>Key Data Relationships:</strong></p>
+            <ul class="feature-list">
+                <li>Accounts store balances and metadata</li>
+                <li>Transactions reference accounts and users</li>
+                <li>Activity logs capture all transaction events</li>
+                <li>Secure token storage for session management</li>
+                <li>Audit records maintained for compliance</li>
+            </ul>
+        </div>
+
+        <!-- Engineering Decisions -->
+        <div class="content-block">
+            <h2>⚙ Engineering Decisions</h2>
+            <h3>Why .NET MAUI?</h3>
+            <p>Cross-platform deployment, single codebase, XAML UI, and strong MVVM support make .NET MAUI ideal for enterprise mobile banking.</p>
+            <h3>Why MVVM?</h3>
+            <p>Ensures clean architecture, testable business logic, and maintainable code organization.</p>
+            <h3>Why Service Abstraction?</h3>
+            <p>Keeps financial processing decoupled from UI and allows API changes without breaking presentation code.</p>
+        </div>
+
+        <!-- Folder Structure -->
+        <div class="content-block">
+            <h2>📂 Folder Structure</h2>
+            <pre class="code-block">/Models
+/ViewModels
+/Views
+/Services
+/Utilities
+/Resources
+</pre>
+        </div>
+
+        <!-- Challenges -->
+        <div class="content-block">
+            <h2>🚧 Key Challenges &amp; Solutions</h2>
+            <div class="challenge-block">
+                <h3>Challenge 1: Managing Transaction State Consistency</h3>
+                <p>Solution: Observable ViewModel properties and controlled state transitions for pending/success/failure states.</p>
+            </div>
+            <div class="challenge-block">
+                <h3>Challenge 2: Preventing Invalid Financial Inputs</h3>
+                <p>Solution: Layered validation (client-side + business rules) and defensive programming.</p>
+            </div>
+            <div class="challenge-block">
+                <h3>Challenge 3: Secure Session Management</h3>
+                <p>Solution: Secure token storage, session timeout handling, explicit logout logic.</p>
+            </div>
+        </div>
+
+        <!-- Performance -->
+        <div class="content-block">
+            <h2>📈 Performance Considerations</h2>
+            <ul class="feature-list">
+                <li>Optimized binding updates</li>
+                <li>Controlled API call frequency</li>
+                <li>Reduced unnecessary UI re-renders</li>
+                <li>Structured asynchronous calls</li>
+            </ul>
+        </div>
+
+        <!-- Future Enhancements -->
+        <div class="content-block">
+            <h2>🧠 Future Enhancements</h2>
+            <ul class="feature-list">
+                <li>Biometric authentication</li>
+                <li>Multi-factor authentication (MFA)</li>
+                <li>Push notifications for transactions</li>
+                <li>Encryption of local cache</li>
+                <li>Role-based access control</li>
+                <li>Cloud backend integration and audit logging</li>
+            </ul>
+        </div>
+
+        <!-- Enterprise Readiness -->
+        <div class="content-block">
+            <h2>📊 Enterprise Readiness Considerations</h2>
+            <ul class="feature-list">
+                <li>Audit logging potential</li>
+                <li>Transaction integrity and separation of financial logic</li>
+                <li>Secure data handling and extensible architecture</li>
+            </ul>
+        </div>
+
+        <!-- Lessons Learned -->
+        <div class="content-block">
+            <h2>🧩 Lessons Learned</h2>
+            <ul class="feature-list">
+                <li>Strict validation layering is essential for banking apps</li>
+                <li>Security must be baked into the architecture</li>
+                <li>Financial logic must never be in the UI layer</li>
+                <li>Structured folder architecture improves maintainability</li>
+            </ul>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="content-block">
+            <h2>📱 Application Screenshots</h2>
+            <div class="screenshot-gallery">
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile1.jpeg" alt="NATMOBILE 1"><p class="screenshot-caption">Transaction Details</p></div>
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile2.jpeg" alt="NATMOBILE 2"><p class="screenshot-caption">Account Overview</p></div>
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile3.jpeg" alt="NATMOBILE 3"><p class="screenshot-caption">Settings & Profile</p></div>
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile4.jpeg" alt="NATMOBILE 4"><p class="screenshot-caption">Account Overview 2</p></div>
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile5.jpeg" alt="NATMOBILE 5"><p class="screenshot-caption">Sign up Page</p></div>
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile6.jpeg" alt="NATMOBILE 6"><p class="screenshot-caption">Homepage</p></div>
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile7.jpeg" alt="NATMOBILE 7"><p class="screenshot-caption">Splash Screen</p></div>
+                <div class="screenshot-item"><img src="assets/screenshots/bank-mobile8.jpeg" alt="NATMOBILE 8"><p class="screenshot-caption">Log in Page</p></div>
+            </div>
+        </div>
+
+        <!-- GitHub Link -->
+        <div class="content-block github-block">
+            <h2>🔗 Repository &amp; Links</h2>
+            <p>Source code and additional resources:</p>
+            <div class="links-container">
+                <a href="https://github.com/lord-ragen/Minimalistic-Banking-App" target="_blank" rel="noopener" class="github-link">
+                    <span class="github-icon">★</span>
+                    <div class="link-content">
+                        <strong>NATMOBILE Repository</strong>
+                        <p>GitHub Repository</p>
+                    </div>
+                </a>
+            </div>
+            <p style="margin-top: 20px; color: #9fb0c8; font-size: 14px;">⭐ If you find the project useful, consider starring the repository on GitHub.</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="content-block cta-block">
+            <h2>Interested in More?</h2>
+            <p>Explore other projects or learn more about the architecture:</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn primary">View All Projects</a>
+                <a href="about.html" class="btn secondary">Learn About Me</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-line">© 2026 Thomas Ragen. All Rights Reserved.</div>
+            <div class="footer-sub">Designed &amp; Engineered with precision.</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

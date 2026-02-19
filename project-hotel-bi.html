@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Business Intelligence | Thomas Ragen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mr. Thomas Ragen</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="architecture.html">Architecture</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail-header">
+        <div class="project-back">
+            <a href="projects.html" class="back-link">← Back to Projects</a>
+        </div>
+        <div class="project-hero">
+            <h1>Hotel Business Intelligence</h1>
+            <p class="project-tagline">Enterprise Power BI solution delivering executive-level hotel performance intelligence (RevPAR, ADR, Realisation %, DSRN/DBRN/DURN).</p>
+            <div class="project-meta">
+                <span class="meta-tag">Power BI</span>
+                <span class="meta-tag">DAX</span>
+                <span class="meta-tag">Data Modeling</span>
+                <span class="meta-tag">Star Schema</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+
+        <!-- Overview -->
+        <div class="content-block">
+            <h2>📊 Hotel Business Intelligence Dashboard</h2>
+            <h3>End-to-End Power BI Analytics Solution</h3>
+            <p>
+                A full-scale Business Intelligence solution transforming raw hotel booking data into executive-level decision intelligence using Microsoft Power BI.
+            </p>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="content-block">
+            <h2>🚀 Project Overview</h2>
+            <p>This project delivered an advanced Power BI dashboard to analyze hotel booking performance, revenue efficiency, capacity utilization, and operational trends. The solution used star schema modeling, advanced DAX, and time intelligence to produce executive-ready insights.</p>
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="content-block">
+            <h2>🎯 Business Problem</h2>
+            <p>Hotel management lacked consistent KPI definitions, real-time visibility into occupancy and revenue leakage, and standardized reporting. This dashboard consolidates data to enable strategic decision-making.</p>
+        </div>
+
+        <!-- My Role -->
+        <div class="content-block">
+            <h2>👨‍💻 My Role</h2>
+            <ul class="role-list">
+                <li>Data Analyst</li>
+                <li>Data Model Architect</li>
+                <li>DAX Developer</li>
+                <li>Dashboard UX Designer</li>
+                <li>Performance Optimization Analyst</li>
+            </ul>
+        </div>
+
+        <!-- Architecture -->
+        <div class="content-block">
+            <h2>🏗 Solution Architecture</h2>
+            <p>Designed using a structured BI pipeline with clear stages from data ingestion to executive delivery:</p>
+            <div class="flow-diagram">
+                <div class="flow-step">📥 Data Acquisition (CSV Import)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">🔧 Power Query Transformation</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">⭐ Star Schema Modeling</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">➗ DAX Measure Development</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">📊 Power BI Dashboard & Reports</div>
+            </div>
+        </div>
+
+        <!-- Data Modeling -->
+        <div class="content-block">
+            <h2>🧩 Data Modeling (Star Schema)</h2>
+            <ul class="feature-list">
+                <li>Fact tables: <code>fact_bookings</code>, <code>fact_aggregated_bookings</code></li>
+                <li>Dimension tables: <code>dim_date</code>, <code>dim_rooms</code></li>
+                <li>One-to-many relationships and single-direction filtering for performance</li>
+            </ul>
+        </div>
+
+        <!-- Advanced DAX -->
+        <div class="content-block">
+            <h2>🧮 Advanced DAX Engineering</h2>
+            <p>Implemented operational and financial metrics including Revenue, ADR, RevPAR, Realisation %, DSRN/DBRN/DURN, and WoW trend measures using optimized DAX patterns.</p>
+        </div>
+
+        <!-- Dashboard Design -->
+        <div class="content-block">
+            <h2>📈 Dashboard Design</h2>
+            <p>Executive summary, operational performance, and trend pages with interactive slicers, conditional formatting, and WoW indicators to support decision-making.</p>
+        </div>
+
+        <!-- Challenges -->
+        <div class="content-block">
+            <h2>🚧 Key Engineering Challenges &amp; Solutions</h2>
+            <div class="challenge-block">
+                <h3>Complex Aggregation Logic</h3>
+                <p>Aligned measures across multiple fact tables while preserving filter context.</p>
+            </div>
+            <div class="challenge-block">
+                <h3>Performance Optimization</h3>
+                <p>Implemented star schema, moved calculations to measures, and optimized relationships to improve report responsiveness.</p>
+            </div>
+            <div class="challenge-block">
+                <h3>Accurate WoW Analysis</h3>
+                <p>Used SELECTEDVALUE and ALL with FILTER to compute previous-week values reliably.</p>
+            </div>
+        </div>
+
+        <!-- Business Impact -->
+        <div class="content-block">
+            <h2>📊 Business Impact</h2>
+            <ul class="feature-list">
+                <li>Real-time revenue efficiency monitoring</li>
+                <li>Reduced revenue leakage by surfacing cancellations and no-shows</li>
+                <li>Standardized hotel KPIs and WoW monitoring</li>
+            </ul>
+        </div>
+
+        <!-- Future Enhancements -->
+        <div class="content-block">
+            <h2>🔮 Future Enhancements</h2>
+            <ul class="feature-list">
+                <li>Row-Level Security (RLS)</li>
+                <li>Cloud refresh and Azure SQL integration</li>
+                <li>Predictive occupancy forecasting and anomaly detection</li>
+            </ul>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="content-block">
+            <h2>🖼 Dashboard Screenshot</h2>
+            <div class="screenshot-gallery">
+                <div class="screenshot-item"><img src="assets/screenshots/hotel-dashboard.PNG" alt="Hotel BI Dashboard"><p class="screenshot-caption">Executive Summary (Revenue & Occupancy)</p></div>
+            </div>
+        </div>
+
+        <!-- Repository -->
+        <div class="content-block github-block">
+            <h2>🔗 Links</h2>
+            <p>Power BI report and supporting materials (data model, DAX docs).</p>
+            <div class="links-container">
+                <a href="#" class="github-link">
+                    <span class="github-icon">★</span>
+                    <div class="link-content">
+                        <strong>Power BI Project Files</strong>
+                        <p>Drive / report files (link provided)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="content-block cta-block">
+            <h2>Interested in More?</h2>
+            <p>Explore other projects or request a tailored BI summary.</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn primary">View All Projects</a>
+                <a href="about.html" class="btn secondary">Learn About Me</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-line">© 2026 Thomas Ragen. All Rights Reserved.</div>
+            <div class="footer-sub">Designed &amp; Engineered with precision.</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Architecture | Thomas Ragen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">TR</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="architecture.html" class="active">Architecture</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Engineering Philosophy Section -->
+    <section class="page-section">
+        <h1 class="page-title">Engineering Philosophy</h1>
+        <p class="page-text">
+            I design systems with <strong>modular architecture</strong>, <strong>observability</strong>, <strong>risk
+                control</strong>,
+            and <strong>scalability</strong> as core principles. My approach ensures maintainable, resilient, and
+            high-performing systems.
+        </p>
+
+        <!-- Principles List -->
+        <div class="architecture-principles">
+
+            <!-- Domain-Driven Design -->
+            <div class="principle">
+                <h2>Domain-Driven Design</h2>
+                <p>Organizing systems around business domains to reduce complexity and align code with real-world
+                    processes.</p>
+                <p><em>Example:</em> In <strong>Hoops Track Kenya</strong>, features like Teams, Fixtures, and Player
+                    Profiles are structured as separate domain modules.</p>
+            </div>
+
+            <!-- Event-Driven Systems -->
+            <div class="principle">
+                <h2>Event-Driven Systems</h2>
+                <p>Building responsive systems where components communicate through events, enabling decoupled and
+                    asynchronous workflows.</p>
+                <p><em>Example:</em> <strong>TBotOne</strong> triggers trade alerts when key price levels are hit,
+                    without blocking other processes.</p>
+            </div>
+
+            <!-- Modular Monolith Design -->
+            <div class="principle">
+                <h2>Modular Monolith Design</h2>
+                <p>Maintaining a single deployable application while keeping modules independent, testable, and
+                    scalable.</p>
+                <p><em>Example:</em> Hoops Track Kenya separates stats, chat, and team management into distinct modules
+                    with shared core services.</p>
+            </div>
+
+            <!-- Observability & Monitoring -->
+            <div class="principle">
+                <h2>Observability & Monitoring</h2>
+                <p>Tracking system health with metrics, logging, and dashboards for performance insights and proactive
+                    debugging.</p>
+                <p><em>Example:</em> TBotOne integrates <strong>Grafana/Prometheus</strong> for metrics and
+                    <strong>Sentry</strong> for error tracking.</p>
+            </div>
+
+            <!-- Risk-Based Financial Logic -->
+            <div class="principle">
+                <h2>Risk-Based Financial Logic</h2>
+                <p>Designing systems to account for operational and financial risk, ensuring safe and controlled
+                    operations.</p>
+                <p><em>Example:</em> Position sizing and stop-loss logic in TBotOne limits exposure to a maximum of 2%
+                    risk per trade.</p>
+            </div>
+
+            <!-- Additional Principles -->
+            <div class="principle">
+                <h2>Additional Principles</h2>
+                <ul>
+                    <li><strong>Scalability & Performance:</strong> Systems are optimized to handle growth in users and
+                        data.</li>
+                    <li><strong>Security by Design:</strong> Access control, data encryption, and API protection are
+                        integrated from the start.</li>
+                    <li><strong>Testability & Automation:</strong> CI/CD pipelines, automated tests, and monitoring
+                        loops ensure reliability.</li>
+                    <li><strong>Resilience & Fault Tolerance:</strong> Retry logic, failover strategies, and graceful
+                        recovery from errors.</li>
+                    <li><strong>Clean Code & Maintainability:</strong> Readable, consistent, and well-documented code
+                        for long-term stability.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Optional Diagram Placeholder -->
+        <div class="architecture-diagram">
+            <h2>How Principles Interconnect</h2>
+            <p>Visualize how modular architecture, DDD, event-driven design, observability, and risk control work
+                together.</p>
+            <!-- Replace with actual diagram/image -->
+            <img src="assets/diagrams/architecture-diagram.png" alt="Architecture Diagram" />
+        </div>
+
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-line">© 2026 Thomas Ragen. All Rights Reserved.</div>
+            <div class="footer-sub">Designed &amp; Engineered with precision.</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

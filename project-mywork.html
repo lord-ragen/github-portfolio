@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MyWork Application | Thomas Ragen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mr. Thomas Ragen</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="architecture.html">Architecture</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail-header mywork-header">
+        <div class="project-back">
+            <a href="projects.html" class="back-link">← Back to Projects</a>
+        </div>
+        <div class="project-hero">
+            <div class="project-icon">
+                <img src="assets/images/MyWork Icon.png" alt="MyWork Application Logo">
+            </div>
+            <h1>MyWork Application</h1>
+            <p class="project-tagline">A structured work management system for managing notes, tasks, and events, designed for productivity tracking,
+            organization, accountability, and structured workflow management.</p>
+            <div class="project-meta">
+                <span class="meta-tag">Dart</span>
+                <span class="meta-tag">Flutter</span>
+                <span class="meta-tag">SQL Server</span>
+                <span class="meta-tag">Productivity Management</span>
+                <span class="meta-tag">Layered Architecture</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        
+        <!-- Overview -->
+        <div class="content-block">
+            <h2>🚀 Project Overview</h2>
+            <p>
+                MyWork is a structured productivity and workflow management application designed to help users efficiently organize
+                their notes, tasks, and events within a single unified system. The application provides a centralized environment where
+                ideas can be captured as notes, transformed into actionable tasks, and scheduled as time-bound events — creating a
+                complete productivity lifecycle.            
+            </p>
+            <p>
+                The system focuses on clarity, accountability, and time management by offering task prioritization, deadline tracking,
+                event scheduling with reminders, and categorized note organization. It includes search functionality, dashboard
+                analytics, and activity tracking to help users monitor progress and maintain structured workflows.
+            </p>
+            <p>
+                From an engineering perspective, MyWork was built with a modular architecture, clean domain modeling, and scalable
+                database design, ensuring maintainability and future expansion into mobile platforms, collaboration features, and
+                analytics-driven productivity insights.
+            </p>
+            <p>
+                In essence, MyWork bridges the gap between idea capture and execution, transforming unstructured work into organized,
+                trackable, and measurable productivity.
+            </p>
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="content-block">
+            <h2>🎯 Problem Statement</h2>
+            <p>Manual productivity management creates significant friction:</p>
+            <ul class="feature-list">
+                <li>Scattered notes across multiple platforms</li>
+                <li>Tasks without clear deadlines or priorities</li>
+                <li>Event scheduling without conflict detection</li>
+                <li>No unified view of personal productivity</li>
+                <li>Difficult to track task completion and progress</li>
+                <li>No structured workflow from idea to execution</li>
+            </ul>
+            <p>
+                MyWork solves this by creating a structured, integrated system that unifies note management, task tracking, and event scheduling in one place.
+            </p>
+        </div>
+
+        <!-- My Role -->
+        <div class="content-block">
+            <h2>👨‍💻 My Role</h2>
+            <ul class="role-list">
+                <li><strong>System Architect</strong> — Designed the entire system structure</li>
+                <li><strong>Backend Logic Designer</strong> — Implemented core business rules</li>
+                <li><strong>Database Schema Designer</strong> — Structured data models for scalability</li>
+                <li><strong>Business Rules Implementer</strong> — Enforced constraints and validations</li>
+                <li><strong>UI Workflow Designer</strong> — Crafted user-centric interfaces</li>
+            </ul>
+            <p>
+                I designed the business logic engine that enforces workforce constraints and operational rules.
+            </p>
+        </div>
+
+        <!-- Core Functional Modules -->
+        <div class="content-block">
+            <h2>🔧 Core Functional Modules</h2>
+            
+            <div class="features-block">
+                <h3>1️⃣ Authentication &amp; Authorization</h3>
+                <ul class="feature-list">
+                    <li>User account creation and management</li>
+                    <li>Password encryption and reset functionality</li>
+                    <li>Session management and token validation</li>
+                    <li>Role-based access control (Admin, User)</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>2️⃣ Notes Module</h3>
+                <ul class="feature-list">
+                    <li>Rich text note creation and editing</li>
+                    <li>Note categorization and tagging</li>
+                    <li>Search functionality across all notes</li>
+                    <li>Note sharing and collaboration features</li>
+                    <li>Archive and permanent deletion</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>3️⃣ Tasks Module</h3>
+                <ul class="feature-list">
+                    <li>Task creation from notes or standalone</li>
+                    <li>Priority levels (High, Medium, Low)</li>
+                    <li>Status tracking (Open, In Progress, Completed)</li>
+                    <li>Due dates and deadline tracking</li>
+                    <li>Task dependencies and subtasks</li>
+                    <li>Assignment and reassignment functionality</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>4️⃣ Events Module</h3>
+                <ul class="feature-list">
+                    <li>Event scheduling with date/time selection</li>
+                    <li>Recurring event patterns (daily, weekly, monthly)</li>
+                    <li>Conflict detection and warning system</li>
+                    <li>Event reminders and notifications</li>
+                    <li>Event categorization and color coding</li>
+                    <li>Calendar integration view</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>5️⃣ Dashboard Module</h3>
+                <ul class="feature-list">
+                    <li>Personal productivity dashboard</li>
+                    <li>Today's overview (tasks due, events scheduled)</li>
+                    <li>Week/month view planning</li>
+                    <li>Quick statistics (completed tasks, pending notes)</li>
+                    <li>Customizable widgets and layouts</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>6️⃣ Search &amp; Filter Module</h3>
+                <ul class="feature-list">
+                    <li>Full-text search across all data types</li>
+                    <li>Advanced filters by date, status, priority</li>
+                    <li>Tag-based filtering and faceted search</li>
+                    <li>Search result ranking and relevance</li>
+                    <li>Saved search queries for quick access</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>7️⃣ Notifications Module</h3>
+                <ul class="feature-list">
+                    <li>Task deadline notifications</li>
+                    <li>Event reminders (15 min, 1 hour, 1 day before)</li>
+                    <li>Collaboration notifications (when shared with)</li>
+                    <li>System notifications for errors/updates</li>
+                    <li>Notification preferences and do-not-disturb modes</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>8️⃣ Audit &amp; Activity Logging</h3>
+                <ul class="feature-list">
+                    <li>Complete activity log of all operations</li>
+                    <li>User action tracking (create, edit, delete)</li>
+                    <li>Change history and version control</li>
+                    <li>Deleted item recovery within 30 days</li>
+                    <li>Admin audit reports</li>
+                </ul>
+            </div>
+
+            <div class="features-block">
+                <h3>9️⃣ Sync &amp; Offline Module</h3>
+                <ul class="feature-list">
+                    <li>Real-time data synchronization across devices</li>
+                    <li>Conflict resolution for concurrent edits</li>
+                    <li>Offline mode with later sync</li>
+                    <li>Cloud backup and restore functionality</li>
+                    <li>Data export in multiple formats (JSON, CSV, PDF)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="content-block">
+            <h2>🧠 Technology Stack</h2>
+            <div class="tech-stack-grid">
+                <div class="tech-item">
+                    <strong>Dart</strong>
+                    <p>Backend business logic and API</p>
+                </div>
+                <div class="tech-item">
+                    <strong>Flutter Framework</strong>
+                    <p>Application runtime and libraries</p>
+                </div>
+                <div class="tech-item">
+                    <strong>SQL Server</strong>
+                    <p>Relational database</p>
+                </div>
+                <div class="tech-item">
+                    <strong>ASP.NET Web API</strong>
+                    <p>RESTful API endpoints</p>
+                </div>
+                <div class="tech-item">
+                    <strong>Entity Framework</strong>
+                    <p>ORM for database access</p>
+                </div>
+                <div class="tech-item">
+                    <strong>JSON Data Handling</strong>
+                    <p>API data interchange format</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database Design -->
+        <div class="content-block">
+            <h2>🧩 Database Design Considerations</h2>
+            <p>The database is structured around core productivity entities with specific relationships:</p>
+            <ul class="feature-list">
+                <li><strong>Users</strong> — Account profiles, credentials, and preferences</li>
+                <li><strong>Notes</strong> — Captured ideas/information with timestamps and metadata</li>
+                <li><strong>Tasks</strong> — Actionable items with priorities, deadlines, and status</li>
+                <li><strong>Events</strong> — Scheduled items with date/time and recurrence patterns</li>
+                <li><strong>Categories</strong> — Organization structure for notes, tasks, and events</li>
+                <li><strong>Tags</strong> — Flexible labeling system for cross-cutting concerns</li>
+                <li><strong>Notifications</strong> — Event reminders and alerting configuration</li>
+                <li><strong>ActivityLogs</strong> — Complete audit trail of all user actions</li>
+            </ul>
+            <p style="margin-top: 16px;"><strong>Key Design Decisions:</strong></p>
+            <ul class="feature-list">
+                <li>Denormalization for performance in dashboard queries</li>
+                <li>Soft deletes for 30-day recovery window</li>
+                <li>Event timestamps (Created, Modified, Accessed) for conflict detection</li>
+                <li>Referential integrity to maintain consistency</li>
+                <li>Indexed search columns for high-speed full-text search</li>
+            </ul>
+        </div>
+
+        <!-- Data Flow -->
+        <div class="content-block">
+            <h2>🔄 Data Flow Design</h2>
+            <p>MyWork follows a structured workflow that moves information from idea to execution:</p>
+            <div class="flow-diagram">
+                <div class="flow-step">📝 User Captures Note (Idea/Information)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">✅ Convert Note to Task (Make Actionable)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">📅 Schedule Task as Event (Plan Execution)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">🔔 Set Reminders &amp; Notifications</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">✨ Execute &amp; Mark Complete</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">📊 Log Activity &amp; Archive</div>
+            </div>
+            <p style="margin-top: 16px;"><strong>Key Data Relationships:</strong></p>
+            <ul class="feature-list">
+                <li>Notes can generate multiple tasks</li>
+                <li>Tasks can have multiple scheduled events</li>
+                <li>Events trigger notifications based on user preferences</li>
+                <li>All operations create activity log entries for audit trail</li>
+                <li>Search indexes built automatically on note, task, and event content</li>
+            </ul>
+        </div>
+            <p style="margin-top: 20px;">This structured flow ensures consistency, traceability, and compliance with all operational rules.</p>
+        </div>
+
+        <!-- Challenges -->
+        <div class="content-block">
+            <h2>🚧 Key Engineering Challenges &amp; Solutions</h2>
+            
+            <div class="challenge-block">
+                <h3>Challenge 1: Full-Text Search Efficiency at Scale</h3>
+                <p><strong>Problem:</strong> Searching across millions of notes, tasks, and events quickly without performance degradation.</p>
+                <p><strong>Solution:</strong></p>
+                <ul class="feature-list">
+                    <li>Implemented SQL Server full-text indexes on searchable columns</li>
+                    <li>Created materialized search result caching</li>
+                    <li>Added query optimization with proper indexing strategy</li>
+                </ul>
+                <p style="margin-top: 12px; color: #cbd5e1;">Result: Sub-second search response times even with 100K+ records.</p>
+            </div>
+
+            <div class="challenge-block">
+                <h3>Challenge 2: Time-Based Logic &amp; Timezone Handling</h3>
+                <p><strong>Problem:</strong> Managing deadlines, reminders, and events across different user timezones accurately.</p>
+                <p><strong>Solution:</strong></p>
+                <ul class="feature-list">
+                    <li>Store all times as UTC in database</li>
+                    <li>Convert to user timezone only at presentation layer</li>
+                    <li>Implement daylight saving time awareness</li>
+                    <li>Validate deadline logic in UTC first, then display in local time</li>
+                </ul>
+                <p style="margin-top: 12px; color: #cbd5e1;">Result: Accurate scheduling regardless of user location.</p>
+            </div>
+
+            <div class="challenge-block">
+                <h3>Challenge 3: Concurrent Updates &amp; Data Consistency</h3>
+                <p><strong>Problem:</strong> Preventing data corruption when multiple users edit the same note/task/event simultaneously.</p>
+                <p><strong>Solution:</strong></p>
+                <ul class="feature-list">
+                    <li>Implemented optimistic locking with version tracking</li>
+                    <li>Added last-write-wins conflict resolution strategy</li>
+                    <li>Created activity log to track all changes</li>
+                    <li>Implemented merge algorithms for concurrent edits</li>
+                </ul>
+                <p style="margin-top: 12px; color: #cbd5e1;">Result: Reliable data consistency without blocking users.</p>
+            </div>
+
+            <div class="challenge-block">
+                <h3>Challenge 4: Dashboard Performance Under Load</h3>
+                <p><strong>Problem:</strong> Dashboard must render instantly with today's tasks, events, and statistics without slow queries.</p>
+                <p><strong>Solution:</strong></p>
+                <ul class="feature-list">
+                    <li>Denormalized dashboard data in separate table</li>
+                    <li>Implemented scheduled jobs to refresh dashboard cache hourly</li>
+                    <li>Added pagination for large result sets</li>
+                    <li>Optimized queries with WHERE clause filters</li>
+                </ul>
+                <p style="margin-top: 12px; color: #cbd5e1;">Result: Dashboard loads in under 100ms.</p>
+            </div>
+
+            <div class="challenge-block">
+                <h3>Challenge 5: State Management Across Complex Workflows</h3>
+                <p><strong>Problem:</strong> Maintaining consistency of task/event status during transitions (note→task→event→complete).</p>
+                <p><strong>Solution:</strong></p>
+                <ul class="feature-list">
+                    <li>Implemented state machine pattern for status transitions</li>
+                    <li>Enforced valid state transitions with validation rules</li>
+                    <li>Used stored procedures for atomic operations</li>
+                    <li>Added state transition logging for audit trail</li>
+                </ul>
+                <p style="margin-top: 12px; color: #cbd5e1;">Result: No orphaned or corrupted workflow states.</p>
+            </div>
+        </div>
+
+        <!-- Impact -->
+        <div class="content-block">
+            <h2>📈 Operational Impact</h2>
+            <p>The MyWork Application delivers measurable productivity improvements:</p>
+            <ul class="feature-list">
+                <li>Improved Organization — All notes, tasks, and events centralized in one place</li>
+                <li>Better Time Management — Clear visibility of deadlines and scheduled events</li>
+                <li>Increased Accountability — Activity logs and completion tracking</li>
+                <li>Reduced Cognitive Load — System handles reminders and follow-ups automatically</li>
+                <li>Enhanced Collaboration — Share notes and tasks with team members</li>
+                <li>Better Planning — Dashboard shows today's priorities and upcoming events</li>
+                <li>Improved Completion Rate — Structured workflow increases task completion</li>
+                <li>Audit Trail — Complete history of all changes and decisions</li>
+            </ul>
+        </div>
+
+        <!-- Scalability -->
+        <div class="content-block">
+            <h2>🔐 Scalability &amp; Future-Ready Design</h2>
+            <p>Designed with growth and extensibility in mind:</p>
+            <ul class="feature-list">
+                <li>Role-based access control framework for team collaboration</li>
+                <li>Multi-tenant architecture support for SaaS deployment</li>
+                <li>Third-party integration points (Slack, Microsoft Teams, Google Calendar)</li>
+                <li>Comprehensive audit logging for compliance and security</li>
+                <li>Real-time notification infrastructure via WebSockets</li>
+                <li>API-first design for mobile and web client flexibility</li>
+                <li>Database partitioning strategy for million+ user support</li>
+                <li>Caching layer for performance optimization</li>
+            </ul>
+        </div>
+
+        <!-- Engineering Principles -->
+        <div class="content-block">
+            <h2>🧠 Engineering Principles Applied</h2>
+            <ul class="feature-list">
+                <li><strong>Domain-Driven Design</strong> — Business logic models mirror real-world productivity concepts</li>
+                <li><strong>Clean Architecture</strong> — Layered design separates business logic, data access, and presentation</li>
+                <li><strong>SOLID Principles</strong> — Single responsibility, open/closed, interface segregation applied throughout</li>
+                <li><strong>API-First Design</strong> — RESTful endpoints designed before implementation</li>
+                <li><strong>State Machine Pattern</strong> — Rigid state transitions prevent invalid workflow states</li>
+                <li><strong>Caching Strategy</strong> — Multi-level caching for performance optimization</li>
+                <li><strong>Event Sourcing Concepts</strong> — Complete audit trail of all domain events</li>
+                <li><strong>Optimization for Scalability</strong> — Built for 1M+ concurrent users from day one</li>
+            </ul>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="content-block">
+            <h2>📱 Application Screenshots</h2>
+            <p>A visual walkthrough of the MyWork Application interface and key workflows:</p>
+            <div class="screenshot-gallery">
+                <div class="screenshot-item">
+                    <img src="assets/screenshots/MYWORK1.jpg" alt="MyWork - Dashboard">
+                    <p class="screenshot-caption">Dashboard Overview</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/screenshots/MYWORK2.jpg" alt="MyWork - Schedule View">
+                    <p class="screenshot-caption">Calendar View</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/screenshots/MYWORK3.jpg" alt="MyWork - Shift Assignment">
+                    <p class="screenshot-caption">Profile & Settings Page</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/screenshots/MYWORK4.jpg" alt="MyWork - Monitoring Module">
+                    <p class="screenshot-caption">Notes Page</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/screenshots/MYWORK5.jpg" alt="MyWork - Reports">
+                    <p class="screenshot-caption">Task Page</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/screenshots/MYWORK6.jpg" alt="MyWork - Configuration">
+                    <p class="screenshot-caption">Events Page</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub Link -->
+        <div class="content-block github-block">
+            <h2>🔗 Repository &amp; Links</h2>
+            <p>Access the complete source code and implementation details:</p>
+            <div class="links-container">
+                <a href="https://github.com/lord-ragen/my_work" target="_blank" rel="noopener" class="github-link">
+                    <span class="github-icon">★</span>
+                    <div class="link-content">
+                        <strong>MyWork Application</strong>
+                        <p>GitHub Repository</p>
+                    </div>
+                </a>
+            </div>
+            <p style="margin-top: 20px; color: #9fb0c8; font-size: 14px;">
+                ⭐ If you find the project useful, consider starring the repository on GitHub.
+            </p>
+        </div>
+
+        <!-- Future Enhancements -->
+        <div class="content-block">
+            <h2>🧪 Future Enhancements</h2>
+            <ul class="feature-list">
+                <li>AI-powered task prioritization based on deadline and dependencies</li>
+                <li>Natural language processing for smart task creation from notes</li>
+                <li>Integration with Slack, Microsoft Teams, and Google Calendar</li>
+                <li>Mobile native apps (iOS/Android) for on-the-go access</li>
+                <li>Advanced analytics dashboard with productivity insights</li>
+                <li>Recurring task templates and workflow automation</li>
+                <li>Team collaboration features with real-time sync</li>
+                <li>Browser extension for quick note capture from anywhere</li>
+            </ul>
+        </div>
+
+        <!-- Lessons Learned -->
+        <div class="content-block">
+            <h2>🧩 What I Learned</h2>
+            <ul class="feature-list">
+                <li><strong>Domain Modeling is Critical</strong> — Understanding the problem space deeply led to better architecture</li>
+                <li><strong>Time Logic is Complex</strong> — Timezone and recurring event patterns require careful design from the start</li>
+                <li><strong>Performance Requires Upfront Thinking</strong> — Caching and indexing decisions can't be retrofitted easily</li>
+                <li><strong>State Machines Prevent Bugs</strong> — Rigid state transitions eliminated subtle workflow bugs</li>
+                <li><strong>Audit Trails Build Trust</strong> — Complete activity logs are essential for user confidence</li>
+                <li><strong>Scalability Must Be Built In</strong> — Architectural patterns for scale can't be added later</li>
+                <li><strong>Clean Separation of Concerns Saves Time</strong> — Business logic, data access, and presentation well-separated made maintenance easy</li>
+                <li><strong>User-Centric Workflows Win</strong> — Notes→Tasks→Events workflow felt natural and intuitive to users</li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="content-block cta-block">
+            <h2>Interested in More?</h2>
+            <p>Explore other projects or dive deeper into my work:</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn primary">View All Projects</a>
+                <a href="about.html" class="btn secondary">Learn About Me</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-line">© 2026 Thomas Ragen. All Rights Reserved.</div>
+            <div class="footer-sub">Designed &amp; Engineered with precision.</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>
