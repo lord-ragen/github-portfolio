@@ -1,7 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+const nodeProcess = (globalThis as typeof globalThis & {
+  process?: { env?: { NODE_ENV?: string } };
+}).process;
+
 export default defineConfig({
   plugins: [react()],
-  base: import.meta.env.PROD ? "/github-portfolio/" : "/",
+  base: nodeProcess?.env?.NODE_ENV === "production" ? "/github-portfolio/" : "/",
 });
