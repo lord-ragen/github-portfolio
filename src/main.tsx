@@ -262,8 +262,8 @@ function App() {
                 </div>
               </div>
               <aside style={{ alignSelf: "end", borderLeft: `1px solid ${colors.line}`, paddingLeft: 24 }}>
-                <div style={{ width: 66, height: 66, borderRadius: "50%", overflow: "hidden", border: `2px solid ${colors.oliveDrab}`, marginBottom: 18 }}>
-                  <img src="assets/images/Thomas-Ragen.jpg" alt="Thomas Ragen" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ width: isMobile ? "min(100%, 220px)" : 260, aspectRatio: "4 / 5", borderRadius: 24, overflow: "hidden", border: `2px solid ${colors.oliveDrab}`, marginBottom: 18 }}>
+                  <img src="assets/images/Thomas-Ragen.jpg" alt="Thomas Ragen" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
                 </div>
                 <p style={{ color: colors.muted, fontSize: 14, marginBottom: 12 }}>Currently focused on</p>
                 <p style={{ fontSize: 24, lineHeight: 1.25, margin: 0 }}>Systems that make complex work feel simple.</p>
@@ -334,9 +334,9 @@ function ProjectDetail({ project, onBack, isMobile }: { project: Project; onBack
       <button onClick={onBack} style={{ ...secondaryButton, cursor: "pointer", background: "transparent" }}>← Back to all work</button>
       <p style={{ ...kicker, color: project.accent, marginTop: 70 }}>{project.category}</p>
       <h1 style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: 0.92, letterSpacing: "-0.08em", maxWidth: 900, margin: "22px 0 30px" }}>{project.title}</h1>
-      {project.image && <img src={project.image} alt="" style={{ width: "100%", maxHeight: 420, objectFit: "cover", border: `1px solid ${colors.line}`, marginBottom: 42 }} />}
+      {project.image && <img src={project.image} alt="" style={{ width: "100%", maxHeight: 420, objectFit: "cover", borderRadius: 24, border: `1px solid ${colors.line}`, marginBottom: 42 }} />}
       {project.gallery && project.gallery.length > 1 && <div style={{ display: "grid", gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(3, 1fr)", gap: 10, marginBottom: 52 }}>
-        {project.gallery.map((image, index) => <img key={image} src={image} alt={`${project.title} screenshot ${index + 1}`} style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", border: `1px solid ${colors.line}` }} />)}
+        {project.gallery.map((image, index) => <img key={image} src={image} alt={`${project.title} screenshot ${index + 1}`} style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", borderRadius: 16, border: `1px solid ${colors.line}` }} />)}
       </div>}
       <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "0.75fr 1.25fr", gap: 60 }}>
         <div><p style={kicker}>My role</p><p style={{ color: colors.bone, fontSize: 19 }}>{project.role}</p><div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 24 }}>{project.tags.map((tag) => <span key={tag} style={tagStyle}>{tag}</span>)}</div></div>
@@ -373,8 +373,8 @@ const sectionHeading: CSSProperties = { display: "flex", justifyContent: "space-
 const primaryButton: CSSProperties = { background: colors.oliveDrab, color: colors.floralWhite, padding: "14px 18px", borderRadius: 999, fontWeight: 800, textDecoration: "none", display: "inline-flex", gap: 12, alignItems: "center" };
 const secondaryButton: CSSProperties = { color: colors.bone, padding: "14px 18px", border: `1px solid ${colors.line}`, borderRadius: 999, fontWeight: 700, textDecoration: "none" };
 const filterButton: CSSProperties = { border: `1px solid ${colors.line}`, background: "transparent", color: colors.bone, padding: "9px 14px", borderRadius: 999, cursor: "pointer", fontSize: 13 };
-const groupCard: CSSProperties = { display: "grid", gap: 12, minHeight: 190, padding: 20, textAlign: "left", color: colors.floralWhite, background: colors.panel, border: `1px solid ${colors.line}`, cursor: "pointer" };
-const projectCard: CSSProperties = { background: colors.panel, border: `1px solid ${colors.line}`, padding: 28, minHeight: 270, display: "flex", flexDirection: "column", justifyContent: "space-between" };
+const groupCard: CSSProperties = { display: "grid", gap: 12, minHeight: 190, padding: 20, textAlign: "left", color: colors.floralWhite, background: colors.panel, border: `1px solid ${colors.line}`, borderRadius: 24, cursor: "pointer", overflow: "hidden" };
+const projectCard: CSSProperties = { background: colors.panel, border: `1px solid ${colors.line}`, borderRadius: 24, padding: 28, minHeight: 270, display: "flex", flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
 const tagStyle: CSSProperties = { color: colors.bone, border: `1px solid ${colors.line}`, padding: "6px 10px", borderRadius: 999, fontSize: 12 };
 
 createRoot(document.getElementById("root")!).render(<StrictMode><App /></StrictMode>);
