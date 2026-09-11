@@ -313,7 +313,7 @@ function App() {
               </div>
               <aside style={{ alignSelf: "end", borderLeft: `1px solid ${colors.line}`, paddingLeft: 24 }}>
                 <div style={{ width: isMobile ? "min(100%, 220px)" : 260, aspectRatio: "4 / 5", borderRadius: 24, overflow: "hidden", border: `2px solid ${colors.oliveDrab}`, marginBottom: 18 }}>
-                  <img src="assets/images/Thomas-Ragen.jpg" alt="Thomas Ragen" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+                  <img src="assets/images/Thomas Recent Background.jpg" alt="Thomas Ragen" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
                 </div>
                 <p style={{ color: colors.muted, fontSize: 14, marginBottom: 12 }}>Currently focused on</p>
                 <p style={{ fontSize: 24, lineHeight: 1.25, margin: 0 }}>Software • Systems • Automation</p>
