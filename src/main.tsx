@@ -285,12 +285,12 @@ function App() {
     <div style={globalStyle}>
       <header style={{ ...maxWidth, paddingTop: 22 }}>
         <nav style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `1px solid ${colors.line}`, paddingBottom: 18 }}>
-          <a href="#top" style={{ color: colors.floralWhite, textDecoration: "none", fontWeight: 800, letterSpacing: "0.08em", fontSize: 15 }}>TR<span style={{ color: colors.oliveDrab }}>.</span></a>
+          <a href="#top" style={{ color: colors.floralWhite, textDecoration: "none", fontWeight: 800, letterSpacing: "0.04em", fontSize: 15 }}>Thomas Ragen</a>
           <div style={{ display: "flex", gap: 28, alignItems: "center", flexWrap: "wrap", justifyContent: "flex-end" }}>
             <a href="#work" style={navLink}>Work</a>
             <a href="#approach" style={navLink}>Approach</a>
             <a href="#contact" style={navLink}>Contact</a>
-            <a href="assets/Otieno Thomas Ragen Resume.pdf" download style={{ ...smallButton, background: colors.bone, color: colors.smokyBlack }}>Resume ↗</a>
+            <a href="assets/Otieno Thomas Ragen Resume.pdf" download style={{ ...smallButton, background: colors.bone, color: colors.smokyBlack }}>Resume</a>
           </div>
         </nav>
       </header>
@@ -307,13 +307,13 @@ function App() {
                 <p style={{ color: colors.bone, maxWidth: 580, fontSize: 20, lineHeight: 1.55 }}>I build software, support enterprise systems, and automate the work between them.</p>
                 <p style={{ color: colors.muted, maxWidth: 560, fontSize: 16, lineHeight: 1.55, marginTop: 14 }}>My work spans application development, ICT operations, data, automation, and the systems that keep businesses running.</p>
                 <div style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap" }}>
-                  <a href="#work" style={primaryButton}>Explore all work <span>↓</span></a>
-                  <a href="mailto:thomas95ragen@gmail.com" style={secondaryButton}>Start a conversation ↗</a>
+                  <a href="#work" style={primaryButton}>Explore all work</a>
+                  <a href="mailto:thomas95ragen@gmail.com" style={secondaryButton}>Start a conversation</a>
                 </div>
               </div>
               <aside style={{ alignSelf: "end", borderLeft: `1px solid ${colors.line}`, paddingLeft: 24 }}>
-                <div style={{ width: isMobile ? "min(100%, 220px)" : 260, aspectRatio: "4 / 5", borderRadius: 24, overflow: "hidden", border: `2px solid ${colors.oliveDrab}`, marginBottom: 18 }}>
-                  <img src="assets/images/Thomas Recent Background.jpg" alt="Thomas Ragen" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+                <div style={{ width: "min(100%, 320px)", aspectRatio: "3204 / 4080", borderRadius: 24, overflow: "hidden", border: `2px solid ${colors.oliveDrab}`, marginBottom: 18 }}>
+                  <img src="assets/images/Thomas Recent Background.jpg" alt="Thomas Ragen" style={{ display: "block", width: "100%", height: "100%", objectFit: "contain", objectPosition: "center", imageRendering: "auto" }} />
                 </div>
                 <p style={{ color: colors.muted, fontSize: 14, marginBottom: 12 }}>Currently focused on</p>
                 <p style={{ fontSize: 24, lineHeight: 1.25, margin: 0 }}>Software • Systems • Automation</p>
@@ -337,7 +337,7 @@ function App() {
                     <span style={{ color: colors.oliveDrab, fontWeight: 800 }}>{number}</span>
                     <strong>{title}</strong>
                     <span style={{ color: colors.muted, fontSize: 13 }}>{copy}</span>
-                    <span style={{ color: colors.bone, alignSelf: "end" }}>View group ↗</span>
+                    <span style={{ color: colors.bone, alignSelf: "end" }}>View group</span>
                   </button>
                 ))}
               </div>
@@ -347,7 +347,6 @@ function App() {
                     <button key={project.slug} onClick={() => openProject(project.slug)} style={{ ...projectCard, textAlign: "left", color: colors.floralWhite, cursor: "pointer" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", gap: 24, alignItems: "flex-start" }}>
                         <div><p style={{ color: project.accent, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 14 }}>{project.category}</p><h3 style={{ fontSize: 32, lineHeight: 1, margin: 0 }}>{project.title}</h3></div>
-                        <span style={{ color: colors.muted, fontSize: 24 }}>↗</span>
                       </div>
                       <p style={{ color: colors.bone, margin: "24px 0 22px", fontSize: 17 }}>{project.description}</p>
                       <div style={{ display: "grid", gap: 14, borderTop: `1px solid ${colors.line}`, paddingTop: 18 }}>
@@ -356,7 +355,7 @@ function App() {
                         <ProjectCardField label="Engineering note" copy={projectNarratives[project.slug].engineeringNote} />
                         <ProjectCardField label="Outcome" copy={projectNarratives[project.slug].outcome} />
                       </div>
-                      <span style={{ color: project.accent, fontWeight: 800, marginTop: 22 }}>View case study →</span>
+                      <span style={{ color: project.accent, fontWeight: 800, marginTop: 22 }}>View case study</span>
                     </button>
                   ))}
                 </div>
@@ -400,7 +399,7 @@ function ProjectCardField({ label, copy }: { label: string; copy: string }) {
 
 function ExperienceSection({ isMobile }: { isMobile: boolean }) {
   const experience = [
-    { date: "2025 — PRESENT", title: "ICT SUPPORT OFFICER", company: "HFC Kenya", stack: "Enterprise IT · Application Support · Automation", bullets: ["Supporting enterprise users and business-critical systems across multiple branches.", "Managing incidents, escalations, monitoring, documentation, and SLA-driven support.", "Built automation to reduce repetitive ticket-management and reporting work."] },
+    { date: "2025 — PRESENT", title: "ICT SUPPORT OFFICER", company: "HFCB Kenya", stack: "Enterprise IT · Application Support · Automation", bullets: ["Supporting enterprise users and business-critical systems across multiple branches.", "Managing incidents, escalations, monitoring, documentation, and SLA-driven support.", "Built automation to reduce repetitive ticket-management and reporting work."] },
     { date: "2024 — 2025", title: "SOFTWARE DEVELOPMENT", company: "National Bank of Kenya", stack: "Spring Boot · SQL · Reporting · Banking Systems", bullets: ["Worked on software and reporting workflows inside a banking environment.", "Translated operational needs into maintainable application and data solutions.", "Balanced reliability, supportability, and delivery in a regulated context."] },
   ];
   return <section style={{ background: colors.floralWhite, color: colors.smokyBlack, padding: "110px 0" }}><div style={{ ...maxWidth, display: "grid", gridTemplateColumns: isMobile ? "1fr" : "0.75fr 1.25fr", gap: isMobile ? 44 : 90 }}><div><p style={{ ...kicker, color: colors.oliveDrab }}>Experience</p><h2 style={h2}>Built in the real world.</h2><p style={{ color: "#555748", fontSize: 17, maxWidth: 430, marginTop: 24 }}>My work isn&apos;t limited to personal projects. I&apos;ve worked across software development, application support and enterprise IT environments where reliability, incident response and maintainability matter as much as writing code.</p></div><div style={{ display: "grid", gap: 42 }}>{experience.map((item) => <article key={item.company} style={{ borderTop: "1px solid rgba(23, 25, 20, 0.18)", paddingTop: 20 }}><p style={{ ...kicker, color: colors.oliveDrab, margin: 0 }}>{item.date}</p><h3 style={{ fontSize: 25, margin: "14px 0 2px" }}>{item.title}</h3><p style={{ color: colors.smokyBlack, fontSize: 18, margin: 0 }}>{item.company}</p><p style={{ color: "#555748", fontSize: 14, margin: "12px 0 18px" }}>{item.stack}</p><ul style={{ paddingLeft: 18, margin: 0, color: "#555748", display: "grid", gap: 8 }}>{item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></article>)}</div></div></section>;
@@ -414,7 +413,7 @@ function ToolsSection({ isMobile }: { isMobile: boolean }) {
 function ProjectDetail({ project, onBack, isMobile }: { project: Project; onBack: () => void; isMobile: boolean }) {
   return (
     <article style={{ ...maxWidth, paddingTop: isMobile ? 60 : 100, paddingBottom: 110 }}>
-      <button onClick={onBack} style={{ ...secondaryButton, cursor: "pointer", background: "transparent" }}>← Back to all work</button>
+      <button onClick={onBack} style={{ ...secondaryButton, cursor: "pointer", background: "transparent" }}>Back to all work</button>
       <p style={{ ...kicker, color: project.accent, marginTop: 70 }}>{project.category}</p>
       <h1 style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: 0.92, letterSpacing: "-0.08em", maxWidth: 900, margin: "22px 0 30px" }}>{project.title}</h1>
       {project.image && <img src={project.image} alt="" style={{ width: "100%", maxHeight: 420, objectFit: "cover", borderRadius: 24, border: `1px solid ${colors.line}`, marginBottom: 42 }} />}
@@ -442,9 +441,9 @@ function ContactSection({ isMobile }: { isMobile: boolean }) {
       <p style={kicker}>Have a challenge in mind?</p>
       <h2 style={{ ...h2, fontSize: "clamp(2.8rem, 6vw, 6rem)", maxWidth: 800 }}>Have a system worth building?</h2>
       <p style={{ color: colors.bone, fontSize: 19, maxWidth: 620, marginTop: 22 }}>Let&apos;s talk about the problem, the constraints and what a useful solution would look like.</p>
-      <a href="mailto:thomas95ragen@gmail.com" style={{ ...primaryButton, marginTop: 26 }}>Get in touch →</a>
-      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap: 12, marginTop: 40, maxWidth: 800 }}>
-        {contacts.map(([label, value, href]) => <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined} style={{ padding: "18px 0", borderTop: `1px solid ${colors.line}`, color: colors.bone, textDecoration: "none" }}><span style={{ display: "block", color: colors.muted, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.13em" }}>{label}</span><strong style={{ display: "block", marginTop: 5 }}>{value} ↗</strong></a>)}
+      <a href="mailto:thomas95ragen@gmail.com" style={{ ...primaryButton, marginTop: 26 }}>Get in touch</a>
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(5, minmax(0, 1fr))", gap: 10, marginTop: 32, maxWidth: 920 }}>
+        {contacts.map(([label, , href]) => <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined} style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 52, width: "100%", boxSizing: "border-box", padding: "14px 16px", border: `1px solid ${colors.line}`, borderRadius: 12, color: colors.bone, textDecoration: "none", fontWeight: 700, fontSize: 13, whiteSpace: "nowrap" }}>{label}</a>)}
       </div>
     </section>
   );

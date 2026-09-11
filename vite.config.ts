@@ -4,4 +4,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
   base: mode === "production" ? "./" : "/",
+  server: {
+    watch: {
+      ignored: ["**/assets/**"],
+    },
+  },
 }));
