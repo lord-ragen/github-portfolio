@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: mode === "production" ? "/github-portfolio/" : "/",
+  base: mode === "production" ? "./" : "/",
 }));

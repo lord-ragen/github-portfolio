@@ -17,6 +17,12 @@ type Project = {
   gallery?: string[];
 };
 
+type ProjectNarrative = {
+  problem: string;
+  engineeringNote: string;
+  outcome: string;
+};
+
 const colors = {
   smokyBlack: "#171914",
   oliveDrab: "#6b733f",
@@ -193,6 +199,49 @@ const projects: Project[] = [
   },
 ];
 
+const projectNarratives: Record<string, ProjectNarrative> = {
+  mywork: {
+    problem: "Notes, deadlines, events, and follow-ups were scattered across disconnected tools.",
+    engineeringNote: "Separated the workflow into clear presentation, business-rule, service, and data layers with explicit state transitions.",
+    outcome: "A unified productivity system that turns ideas into scheduled, accountable work.",
+  },
+  natmobile: {
+    problem: "Digital banking flows need reliable transactions and security behavior, not just a polished interface.",
+    engineeringNote: "Used MVVM and service abstractions to keep financial rules testable and independent from the mobile UI.",
+    outcome: "A production-minded banking experience with clear validation, session control, and transaction states.",
+  },
+  "hoops-track-kenya": {
+    problem: "Fixtures, teams, player information, and statistics were difficult to maintain and access across separate channels.",
+    engineeringNote: "Designed a mobile-first MVVM workflow with service-layer data access and predictable navigation boundaries.",
+    outcome: "A centralized platform for fixtures, teams, player statistics, and basketball content.",
+  },
+  "hotel-business-intelligence": {
+    problem: "Hotel teams lacked consistent KPI definitions and a dependable view of revenue, capacity, and leakage.",
+    engineeringNote: "Built a star schema and reusable DAX measures so executive and operational views share the same logic.",
+    outcome: "Decision-ready reporting for revenue efficiency, occupancy, cancellations, and week-over-week performance.",
+  },
+  "hr-analytics": {
+    problem: "HR reporting required manual work and made workforce, compensation, and demographic trends hard to compare.",
+    engineeringNote: "Cleaned the source data and organized calculated fields, filters, and drill-downs around real planning questions.",
+    outcome: "Interactive workforce intelligence that reduces reporting effort and improves compensation and staffing decisions.",
+  },
+  tbotone: {
+    problem: "Trading execution needed repeatable signals, observable system state, and guardrails around external actions.",
+    engineeringNote: "Kept strategy, execution, risk controls, monitoring, and reporting as distinct automation stages.",
+    outcome: "A disciplined trading workflow with traceable execution and risk-aware automation patterns.",
+  },
+  "excel-xml-converter": {
+    problem: "Spreadsheet data had to be repeatedly prepared and reshaped before downstream systems could use it.",
+    engineeringNote: "Made field mapping explicit and validation-oriented so the transformation remains predictable as inputs change.",
+    outcome: "Consistent XML output with less manual preparation and fewer integration errors.",
+  },
+  "ticket-management-system": {
+    problem: "Operational requests needed clearer ownership, prioritization, resolution tracking, and recurring insight.",
+    engineeringNote: "Modeled the work as a visible ticket lifecycle with SLA-aware status changes and automated reporting.",
+    outcome: "A more dependable service workflow for intake, escalation, resolution, and operational reporting.",
+  },
+};
+
 const globalStyle: CSSProperties = {
   background: colors.smokyBlack,
   color: colors.floralWhite,
@@ -255,7 +304,8 @@ function App() {
               <div>
                 <p style={kicker}>Software engineer / Nairobi, Kenya</p>
                 <h1 style={{ fontSize: "clamp(3.5rem, 8vw, 7.8rem)", lineHeight: 0.92, letterSpacing: "-0.08em", maxWidth: 850, margin: "24px 0 34px", fontWeight: 800 }}>Build it<br /><span style={{ color: colors.oliveDrab }}>better.</span></h1>
-                <p style={{ color: colors.bone, maxWidth: 580, fontSize: 20, lineHeight: 1.55 }}>I design and engineer useful digital systems — from focused mobile products to dependable enterprise workflows and decision-ready data.</p>
+                <p style={{ color: colors.bone, maxWidth: 580, fontSize: 20, lineHeight: 1.55 }}>I build software, support enterprise systems, and automate the work between them.</p>
+                <p style={{ color: colors.muted, maxWidth: 560, fontSize: 16, lineHeight: 1.55, marginTop: 14 }}>My work spans application development, ICT operations, data, automation, and the systems that keep businesses running.</p>
                 <div style={{ display: "flex", gap: 14, marginTop: 32, flexWrap: "wrap" }}>
                   <a href="#work" style={primaryButton}>Explore all work <span>↓</span></a>
                   <a href="mailto:thomas95ragen@gmail.com" style={secondaryButton}>Start a conversation ↗</a>
@@ -266,7 +316,9 @@ function App() {
                   <img src="assets/images/Thomas-Ragen.jpg" alt="Thomas Ragen" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
                 </div>
                 <p style={{ color: colors.muted, fontSize: 14, marginBottom: 12 }}>Currently focused on</p>
-                <p style={{ fontSize: 24, lineHeight: 1.25, margin: 0 }}>Systems that make complex work feel simple.</p>
+                <p style={{ fontSize: 24, lineHeight: 1.25, margin: 0 }}>Software • Systems • Automation</p>
+                <p style={{ color: colors.muted, fontSize: 15, lineHeight: 1.5, margin: "14px 0 0" }}>Software, support &amp; automation for real-world systems.</p>
+                <ProofMetrics isMobile={isMobile} />
               </aside>
             </section>
 
@@ -281,7 +333,7 @@ function App() {
                   ["Data visualization & analytics", "Dashboards that turn complex data into confident decisions.", "02"],
                   ["Scripting & automation", "Focused tools that remove repetition and keep operations moving.", "03"],
                 ].map(([title, copy, number]) => (
-                  <button key={title} onClick={() => setActiveFilter(title)} style={{ ...groupCard, ...(activeFilter === title ? { border: `1px solid ${colors.oliveDrab}`, background: "#292d20" } : {}) }}>
+                  <button key={title} onClick={() => setActiveFilter(title)} style={{ ...groupCard, ...(activeFilter === title ? { border: `1px solid ${colors.oliveDrab}`, background: "#292d20", borderRadius: 28 } : {}) }}>
                     <span style={{ color: colors.oliveDrab, fontWeight: 800 }}>{number}</span>
                     <strong>{title}</strong>
                     <span style={{ color: colors.muted, fontSize: 13 }}>{copy}</span>
@@ -297,19 +349,28 @@ function App() {
                         <div><p style={{ color: project.accent, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: 14 }}>{project.category}</p><h3 style={{ fontSize: 32, lineHeight: 1, margin: 0 }}>{project.title}</h3></div>
                         <span style={{ color: colors.muted, fontSize: 24 }}>↗</span>
                       </div>
-                      <p style={{ color: colors.bone, maxWidth: 500, margin: "28px 0 32px", fontSize: 17 }}>{project.description}</p>
-                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>{project.tags.map((tag) => <span key={tag} style={tagStyle}>{tag}</span>)}</div>
+                      <p style={{ color: colors.bone, margin: "24px 0 22px", fontSize: 17 }}>{project.description}</p>
+                      <div style={{ display: "grid", gap: 14, borderTop: `1px solid ${colors.line}`, paddingTop: 18 }}>
+                        <ProjectCardField label="Problem" copy={projectNarratives[project.slug].problem} />
+                        <ProjectCardField label="Built with" copy={project.tags.join(" · ")} />
+                        <ProjectCardField label="Engineering note" copy={projectNarratives[project.slug].engineeringNote} />
+                        <ProjectCardField label="Outcome" copy={projectNarratives[project.slug].outcome} />
+                      </div>
+                      <span style={{ color: project.accent, fontWeight: 800, marginTop: 22 }}>View case study →</span>
                     </button>
                   ))}
                 </div>
               )}
             </section>
 
+            <ExperienceSection isMobile={isMobile} />
+            <ToolsSection isMobile={isMobile} />
+
             <section id="approach" style={{ background: colors.floralWhite, color: colors.smokyBlack, padding: "110px 0" }}>
               <div style={{ ...maxWidth, display: "grid", gridTemplateColumns: isMobile ? "1fr" : "0.8fr 1.2fr", gap: isMobile ? 44 : 90 }}>
                 <div><p style={{ ...kicker, color: colors.oliveDrab }}>My approach</p><h2 style={{ ...h2, color: colors.smokyBlack }}>Quietly rigorous. Visibly useful.</h2></div>
                 <div style={{ display: "grid", gap: 36 }}>
-                  {[["01", "Start with the problem", "Good software begins with understanding the people, constraints, and decisions behind a request."], ["02", "Make the system legible", "Clear architecture, thoughtful interfaces, and useful feedback make products easier to trust and evolve."], ["03", "Leave it better", "Every build should improve the workflow it touches — not just add another layer of technology."]].map(([number, title, copy]) => (
+                  {[["01", "Start with the problem", "Before choosing a framework or architecture, I try to understand what is actually failing, who is affected and what success looks like."], ["02", "Make the system legible", "Clear boundaries, predictable data flows and useful documentation make software easier to operate, troubleshoot and hand over."], ["03", "Leave it better", "Good engineering should reduce future work. I look for opportunities to automate repetitive tasks, improve documentation, simplify workflows and remove recurring problems."]].map(([number, title, copy]) => (
                     <div key={number} style={{ display: "grid", gridTemplateColumns: "50px 1fr", gap: 18, borderTop: "1px solid rgba(23, 25, 20, 0.18)", paddingTop: 20 }}><span style={{ color: colors.oliveDrab, fontWeight: 800 }}>{number}</span><div><h3 style={{ margin: "0 0 8px", fontSize: 24 }}>{title}</h3><p style={{ margin: 0, color: "#555748", fontSize: 17 }}>{copy}</p></div></div>
                   ))}
                 </div>
@@ -326,6 +387,28 @@ function App() {
       </footer>
     </div>
   );
+}
+
+function ProofMetrics({ isMobile }: { isMobile: boolean }) {
+  const proof = [["2,000+", "users supported"], ["22", "branches"], ["~300", "tickets / month"], ["20%", "faster resolution"], ["97.9%", "availability"], ["5+", "years building software & IT"]];
+  return <div style={{ borderTop: `1px solid ${colors.line}`, marginTop: 28, paddingTop: 20, display: "grid", gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(2, minmax(0, 1fr))", gap: "18px 14px" }}>{proof.map(([value, label]) => <div key={label}><strong style={{ display: "block", color: colors.floralWhite, fontSize: isMobile ? 23 : 24, lineHeight: 1 }}>{value}</strong><span style={{ display: "block", color: colors.muted, fontSize: 10, lineHeight: 1.35, textTransform: "uppercase", letterSpacing: "0.08em", marginTop: 7 }}>{label}</span></div>)}</div>;
+}
+
+function ProjectCardField({ label, copy }: { label: string; copy: string }) {
+  return <div><span style={{ display: "block", color: colors.oliveDrab, fontSize: 11, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 3 }}>{label}</span><span style={{ display: "block", color: colors.bone, fontSize: 14, lineHeight: 1.45 }}>{copy}</span></div>;
+}
+
+function ExperienceSection({ isMobile }: { isMobile: boolean }) {
+  const experience = [
+    { date: "2025 — PRESENT", title: "ICT SUPPORT OFFICER", company: "HFC Kenya", stack: "Enterprise IT · Application Support · Automation", bullets: ["Supporting enterprise users and business-critical systems across multiple branches.", "Managing incidents, escalations, monitoring, documentation, and SLA-driven support.", "Built automation to reduce repetitive ticket-management and reporting work."] },
+    { date: "2024 — 2025", title: "SOFTWARE DEVELOPMENT", company: "National Bank of Kenya", stack: "Spring Boot · SQL · Reporting · Banking Systems", bullets: ["Worked on software and reporting workflows inside a banking environment.", "Translated operational needs into maintainable application and data solutions.", "Balanced reliability, supportability, and delivery in a regulated context."] },
+  ];
+  return <section style={{ background: colors.floralWhite, color: colors.smokyBlack, padding: "110px 0" }}><div style={{ ...maxWidth, display: "grid", gridTemplateColumns: isMobile ? "1fr" : "0.75fr 1.25fr", gap: isMobile ? 44 : 90 }}><div><p style={{ ...kicker, color: colors.oliveDrab }}>Experience</p><h2 style={h2}>Built in the real world.</h2><p style={{ color: "#555748", fontSize: 17, maxWidth: 430, marginTop: 24 }}>My work isn&apos;t limited to personal projects. I&apos;ve worked across software development, application support and enterprise IT environments where reliability, incident response and maintainability matter as much as writing code.</p></div><div style={{ display: "grid", gap: 42 }}>{experience.map((item) => <article key={item.company} style={{ borderTop: "1px solid rgba(23, 25, 20, 0.18)", paddingTop: 20 }}><p style={{ ...kicker, color: colors.oliveDrab, margin: 0 }}>{item.date}</p><h3 style={{ fontSize: 25, margin: "14px 0 2px" }}>{item.title}</h3><p style={{ color: colors.smokyBlack, fontSize: 18, margin: 0 }}>{item.company}</p><p style={{ color: "#555748", fontSize: 14, margin: "12px 0 18px" }}>{item.stack}</p><ul style={{ paddingLeft: 18, margin: 0, color: "#555748", display: "grid", gap: 8 }}>{item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></article>)}</div></div></section>;
+}
+
+function ToolsSection({ isMobile }: { isMobile: boolean }) {
+  const groups: [string, string[]][] = [["Software", ["Python", "Java", "Spring Boot", "JavaScript", "Flutter", "React Native", ".NET MAUI", "C#"]], ["Data", ["SQL", "Oracle", "SSRS", "Power BI", "Tableau"]], ["Enterprise IT", ["Active Directory", "Microsoft 365", "Application Support", "Incident Management", "Monitoring", "ITSM"]], ["DevOps / Operations", ["Git", "Jenkins", "GitLab CI/CD", "Azure DevOps", "ELK Stack", "Linux"]]];
+  return <section style={{ ...maxWidth, paddingTop: 110, paddingBottom: 110 }}><div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "0.75fr 1.25fr", gap: isMobile ? 44 : 90 }}><div><p style={kicker}>Capabilities</p><h2 style={h2}>What I actually work with.</h2></div><div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap: 36 }}>{groups.map(([title, tools]) => <div key={title}><h3 style={{ color: colors.oliveDrab, fontSize: 20, margin: "0 0 14px" }}>{title}</h3><p style={{ color: colors.bone, lineHeight: 1.9, margin: 0 }}>{(tools as string[]).join(" · ")}</p></div>)}</div></div></section>;
 }
 
 function ProjectDetail({ project, onBack, isMobile }: { project: Project; onBack: () => void; isMobile: boolean }) {
@@ -357,7 +440,9 @@ function ContactSection({ isMobile }: { isMobile: boolean }) {
   return (
     <section id="contact" style={{ ...maxWidth, paddingTop: 120, paddingBottom: 120 }}>
       <p style={kicker}>Have a challenge in mind?</p>
-      <h2 style={{ ...h2, fontSize: "clamp(2.8rem, 6vw, 6rem)", maxWidth: 800 }}>Let’s make something that earns its place.</h2>
+      <h2 style={{ ...h2, fontSize: "clamp(2.8rem, 6vw, 6rem)", maxWidth: 800 }}>Have a system worth building?</h2>
+      <p style={{ color: colors.bone, fontSize: 19, maxWidth: 620, marginTop: 22 }}>Let&apos;s talk about the problem, the constraints and what a useful solution would look like.</p>
+      <a href="mailto:thomas95ragen@gmail.com" style={{ ...primaryButton, marginTop: 26 }}>Get in touch →</a>
       <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap: 12, marginTop: 40, maxWidth: 800 }}>
         {contacts.map(([label, value, href]) => <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined} style={{ padding: "18px 0", borderTop: `1px solid ${colors.line}`, color: colors.bone, textDecoration: "none" }}><span style={{ display: "block", color: colors.muted, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.13em" }}>{label}</span><strong style={{ display: "block", marginTop: 5 }}>{value} ↗</strong></a>)}
       </div>
@@ -373,7 +458,7 @@ const sectionHeading: CSSProperties = { display: "flex", justifyContent: "space-
 const primaryButton: CSSProperties = { background: colors.oliveDrab, color: colors.floralWhite, padding: "14px 18px", borderRadius: 999, fontWeight: 800, textDecoration: "none", display: "inline-flex", gap: 12, alignItems: "center" };
 const secondaryButton: CSSProperties = { color: colors.bone, padding: "14px 18px", border: `1px solid ${colors.line}`, borderRadius: 999, fontWeight: 700, textDecoration: "none" };
 const filterButton: CSSProperties = { border: `1px solid ${colors.line}`, background: "transparent", color: colors.bone, padding: "9px 14px", borderRadius: 999, cursor: "pointer", fontSize: 13 };
-const groupCard: CSSProperties = { display: "grid", gap: 12, minHeight: 190, padding: 20, textAlign: "left", color: colors.floralWhite, background: colors.panel, border: `1px solid ${colors.line}`, borderRadius: 24, cursor: "pointer", overflow: "hidden" };
+const groupCard: CSSProperties = { display: "grid", gap: 12, minHeight: 190, padding: 20, textAlign: "left", color: colors.floralWhite, background: colors.panel, border: `1px solid ${colors.line}`, borderRadius: 28, cursor: "pointer", overflow: "hidden" };
 const projectCard: CSSProperties = { background: colors.panel, border: `1px solid ${colors.line}`, borderRadius: 24, padding: 28, minHeight: 270, display: "flex", flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
 const tagStyle: CSSProperties = { color: colors.bone, border: `1px solid ${colors.line}`, padding: "6px 10px", borderRadius: 999, fontSize: 12 };
 
